@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Practical AI Website Content
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+This repository contains the complete markdown content for the Practical AI Talk companion website. We've organized the content into structured Markdown files that are ready to be used with any static site generator.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Content Structure
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The content is organized into the following pages:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Home** (`pages/index.mdx`) - Introduction to the site
+- **What is AI** (`pages/what-is-ai.mdx`) - Overview of AI technology and how it works
+- **When to use AI** (`pages/when-to-use-ai.mdx`) - Guidelines for effective AI usage
+- **Which AI to use** (`pages/which-ai-to-use.mdx`) - Comparison of AI platforms and models
+- **Input Types and Tools** (`pages/input-types-and-tools.mdx`) - Features of modern AI platforms
+- **Prompting Tips** (`pages/prompting-tips.mdx`) - Techniques for effective prompting
+- **Best Practices** (`pages/best-practices.mdx`) - General best practices for AI usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment Options
 
-## Learn More
+There are several ways to use this content:
 
-To learn more about Next.js, take a look at the following resources:
+### Option 1: Use with Nextra (Recommended for Next.js users)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project is set up to work with Nextra, a Next.js-based documentation site generator. However, there appears to be a compatibility issue with Node.js v22. To resolve this:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Use Node.js v18 LTS** (recommended version for Next.js/Nextra)
+   ```bash
+   # Install nvm (Node Version Manager) if not already installed
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+   
+   # Install and use Node.js v18
+   nvm install 18
+   nvm use 18
+   
+   # Then run the development server
+   npm run dev
+   ```
 
-## Deploy on Vercel
+### Option 2: Use another Static Site Generator
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The content can be easily adapted to work with other static site generators:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Jekyll**: Move the `.mdx` files to `_posts/` (renaming them to `.md` files)
+- **Hugo**: Place them in the `content/` directory
+- **Gatsby**: Use them in a Gatsby site with MDX support
+- **VitePress/VuePress**: Use in a Vue-based documentation site
+
+### Option 3: Direct Access
+
+The markdown files can be directly viewed in any Markdown viewer, including:
+
+- GitHub's web interface
+- VS Code with Markdown preview
+- Obsidian, Notion, or other Markdown-based tools
+
+## Next Steps
+
+1. Choose a deployment approach based on your technical preferences
+2. Customize the appearance and navigation as needed
+3. Deploy to your preferred hosting provider (Vercel, Netlify, GitHub Pages, etc.)
+
+If you need to make content updates, simply edit the corresponding Markdown files.
