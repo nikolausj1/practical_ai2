@@ -10,9 +10,7 @@ const config = {
       </span>
     </>
   ),
-  project: {
-    link: 'https://github.com/nikolausj1/practical_ai2',
-  },
+  /* Removed GitHub project link as requested */
   docsRepositoryBase: 'https://github.com/nikolausj1/practical_ai2/blob/main',
   head: (
     <>
@@ -42,6 +40,34 @@ const config = {
     float: true,
     title: 'On This Page',
   },
+  /* Hide search box as requested */
+  search: {
+    component: null
+  },
+  /* Hide last updated timestamp as requested */
+  gitTimestamp: null,
+  /* Custom CSS for word wrap in code blocks and navigation positioning */
+  primaryHue: 210,
+  style: function useStyle() {
+    return (
+      <style global jsx>{`
+        /* Add word wrap to code blocks */
+        pre code {
+          white-space: pre-wrap !important;
+          word-wrap: break-word !important;
+        }
+        
+        /* Move hamburger menu to left on mobile */
+        @media (max-width: 767px) {
+          .nextra-nav-container .nextra-menu-icon {
+            order: -1 !important;
+            margin-left: 0 !important;
+            margin-right: auto !important;
+          }
+        }
+      `}</style>
+    )
+  }
 }
 
 export default config
