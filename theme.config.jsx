@@ -18,6 +18,19 @@ const config = {
       <meta name="description" content="Practical AI Toolkit - Companion site for the Practical AI talk" />
       <meta property="og:title" content="Practical AI Toolkit" />
       <meta property="og:description" content="Companion site for the Practical AI talk" />
+      
+      {/* Google Analytics */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-618YCL4R4R"></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-618YCL4R4R');
+          `,
+        }}
+      />
     </>
   ),
   footer: {
