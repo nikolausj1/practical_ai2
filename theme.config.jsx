@@ -51,10 +51,26 @@ const config = {
   style: function useStyle() {
     return (
       <style global jsx>{`
-        /* Add word wrap to code blocks */
+        /* Force word wrap on code blocks */
+        pre {
+          overflow-x: auto !important;
+          white-space: pre-wrap !important;
+          word-wrap: break-word !important;
+          word-break: break-word !important;
+          max-width: 100% !important;
+        }
+
         pre code {
           white-space: pre-wrap !important;
           word-wrap: break-word !important;
+          word-break: break-word !important;
+          overflow-wrap: break-word !important;
+        }
+
+        /* Ensure code blocks don't overflow their container */
+        .nextra-code-block pre {
+          max-width: 100% !important;
+          overflow-wrap: break-word !important;
         }
         
         /* Move hamburger menu to left on mobile */
